@@ -1,0 +1,58 @@
+<div class="container" style="background-color: transparent;">
+  <h1 style="text-align: center; margin-top: 28px;">Manage Employees</h1>
+  <div class="row mt-5">
+    <div class="col-md-12 scrollable">
+      <table>
+        <tr class="t-headers">
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Salary</th>
+          <th>Fiscal Code</th>
+          <th>Edit</th>
+          <th>Delete</th>
+        </tr>
+
+        <tr>
+          <td><input placeholder="First Name" [(ngModel)]="employeetoinsert.firstName"></td>
+          <td><input placeholder="Last Name" [(ngModel)]="employeetoinsert.lastName"></td>
+          <td><input placeholder="Salary" [(ngModel)]="employeetoinsert.salary"></td>
+          <td><input placeholder="Fiscal Code" [(ngModel)]="employeetoinsert.fiscalCode"></td>
+
+        
+          <td class="insert">
+            <button (click)="createUserBefore(employeetoinsert.firstName,
+                                              employeetoinsert.lastName,
+                                              employeetoinsert.salary,
+                                              employeetoinsert.fiscalCode)">Insert</button>
+          </td>
+
+          <td class="clear">
+            <button (click)="clear()">Clear</button>
+          </td>
+        </tr>
+
+          <tr *ngFor="let employee of employees">
+            <td>
+              <input [(ngModel)]="employee.firstName">
+            </td>
+            <td>
+             <input [(ngModel)]="employee.lastName">
+            </td>
+            <td>
+              <input [(ngModel)]="employee.salary">
+             </td>
+             <td>
+              <input [(ngModel)]="employee.fiscalCode">
+             </td>
+          
+            <td class="save">
+              <button (click)="update(employee)">Save</button>
+            </td>
+            <td class="delete">
+              <button (click)="delete(employee)">Delete</button>
+            </td>
+          </tr>
+      </table>
+    </div>
+  </div>
+</div>

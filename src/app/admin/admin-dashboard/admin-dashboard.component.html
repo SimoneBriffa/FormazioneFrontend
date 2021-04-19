@@ -1,0 +1,56 @@
+<div class= "container">
+  <h1 style="text-align: center">Welcome {{user.username}}</h1>
+  <div style="text-align: center;">
+    <!-- User's Card -->
+    <div class="card">
+      <a [routerLink]="['/admin-dashboard/users']">
+        <div class="col-md-4" style="margin:0 auto; margin-top: 30px;">
+          <i class="fas fa-users users" style="padding-left: 21px; padding-right: 21px;"></i>
+        </div>
+        <div class="col-md-8 card-body">
+          <h3 class="card-title">Users</h3>
+          <p class="card-text">Access this page in order to be able to execute the CRUD options for Users. (Create, Read, Update, Delete).</p>
+        </div>
+      </a>
+    </div>
+    
+    <!-- Employee's Card -->
+    <div class="card space">
+      <a [routerLink]="['/admin-dashboard/employees']">
+        <div class="col-md-4" style="margin-top: 30px; margin-right: 0px; margin-left: 0;">
+          <i class="fas fa-address-card employees" style="padding-left: 23px; padding-right: 23px;"></i>
+        </div>
+        <div class="col-md-8 card-body">
+          <h3 class="card-title">Employees</h3>
+          <p class="card-text">Access this page in order to be able to execute the CRUD options for Employees. (Create, Read, Update, Delete).</p>
+        </div>
+       </a>
+    </div>
+
+    <!-- Item's Card -->
+    <div class="card card-top">
+      <a [routerLink]="['/admin-dashboard/items']">
+        <div class="col-md-4" style="margin-top: 30px; margin-right: 0px; margin-left: 0;">
+          <i class="fas fa-book items"  style="padding-left: 27px; padding-right: 28px;"></i>
+        </div>
+        <div class="col-md-8 card-body">
+          <h3 class="card-title">Items</h3>
+          <p class="card-text">Access this page in order to be able to execute the CRUD options for Items. (Create, Read, Update, Delete).</p>
+        </div>
+       </a>
+    </div>
+
+    <!-- Item's Tracking Card -->
+    <div class="card card-top space">
+      <a [routerLink]="['/admin-dashboard/itemstracking']">
+        <div class="col-md-4" style="margin-top: 30px; margin-right: 0px; margin-left: 0;">
+          <i class="fas fa-chart-pie itemstracking" style="padding-left: 24px; padding-right: 24px;"></i>
+        </div>
+        <div class="col-md-8 card-body">
+          <h3 class="card-title">Items Tracking</h3>
+          <p class="card-text">Access this page in order to be able to manage the Items Tracking. You can then download a list of all the items that have been lent.</p>
+        </div>
+       </a>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,105 @@
+* {
+    font-size: medium;
+    text-align: center;
+}
+
+/*-------------------
+        Logo
+-------------------*/
+.logo {
+    margin-top: 160px;
+    width: 21%;
+}
+
+/*-------------------
+   Container Fluid
+-------------------*/
+.container-fluid{
+    background-image: url("../../assets/index.png");
+    background-size: cover;
+    height: 100vh;
+    text-align: center;
+}
+
+/*-------------------
+        Form
+-------------------*/
+form{
+    margin-top:20px;
+    padding: 10px;
+    border-radius:0;
+    border-color: crimson;
+    padding: 3em;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 3px 15px 5px rgb(128, 67, 67);
+    -webkit-box-shadow: 0px 3px 15px 5px rgb(128, 67, 67);
+    text-align: center;
+    width: 400px;
+}
+
+p {
+    font-size: 2em;
+    font-weight: bold;
+    color: #ff712f;
+    margin-bottom: 6%;
+    position: relative;
+    top: -6px;
+}
+
+.form-group {
+    display: flex;
+    margin-bottom: 4%;
+    border-bottom: 1px solid orange;
+    margin-bottom: 20px;
+}
+
+i {
+    padding: 2.4%;
+    color: orange;
+}
+
+.form-control::placeholder{
+    color: orange;
+}
+
+.form-control{
+    border: none;
+    border-width: 0; 
+    box-shadow: none;
+    border-radius: 0%;
+    color: orange;
+    background-color: transparent;
+    float: right;
+    text-align: left;
+}
+
+/*-------------------
+       Button
+-------------------*/
+button {
+    color: white;
+    font-weight: bolder;
+    margin-top: 6%;
+    margin-right: 2%;
+    border: none;
+    padding: 10px 25px;
+    transition: 0.5s;
+    background-size: 200% auto;          
+    box-shadow: 0 0 20px #eee;
+    background-image: linear-gradient(to right, #FF512F 0%, #F09819  51%, #FF512F  100%);
+}
+
+button:hover {
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
+}
+
+/*--------------------
+    Mobile Version
+--------------------*/
+@media only screen and (max-width: 1750px) {
+    form {
+        text-align: center;
+    }
+}

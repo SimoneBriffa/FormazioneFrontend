@@ -1,0 +1,30 @@
+<div class= "container">
+  <h1 style="text-align: center">Welcome {{user.employee.firstName}} {{user.employee.lastName}}</h1>
+  <div style="text-align: center;">
+    <!-- Request's Card -->
+    <div class="card">
+      <a [routerLink]="['/user-dashboard/items']">
+        <div class="col-md-4" style="margin:0 auto; margin-top: 30px;">
+          <i class="fas fa-exchange-alt request"></i>
+        </div>
+        <div class="col-md-8 card-body">
+          <h3 class="card-title">Request</h3>
+          <p class="card-text">Access this page in order to be able to Request items. Remember: You can only request an item for each type.</p>
+        </div>
+      </a>
+    </div>
+    
+    <!-- Return's Card -->
+    <div class="card space">
+      <a [routerLink]="['/user-dashboard/myrequests']">
+        <div class="col-md-4" style="margin-top: 30px; margin-right: 0px; margin-left: 0;">
+          <i class="fas fa-undo-alt return"></i>
+        </div>
+        <div class="col-md-8 card-body">
+          <h3 class="card-title">Return</h3>
+          <p class="card-text">Access this page in order to be able to Return items. Remember: You can request items again, after returning them.</p>
+        </div>
+       </a>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,86 @@
+<div class="container">
+  <h1 style="text-align: center; margin-top: 28px;">Manage Items Tracking</h1>
+  <div class="row mt-5">
+    <div class="col-md-1">
+
+    </div>
+    <div class="col-md-10 scrollable">
+      <table>
+        <tr class="t-headers">
+          <th>Owner's Last Name</th>
+          <th>Owner's First  Name</th>
+          <th>Owner's Fiscal Code</th>
+          <th>Item Name</th>
+          <th>Date of request</th>
+        </tr>
+
+        <tr *ngFor="let itemlent of itemsLent">
+          <td>{{itemlent.lastNameOwner}}</td>
+          <td>{{itemlent.firstNameOwner}}</td>
+          <td>{{itemlent.fiscalCodeForLent}}</td>
+          <td>{{itemlent.itemName}}</td>
+          <td>{{itemlent.date}}</td>
+        </tr>
+      </table>
+    </div>
+    <div class="col-md-1">
+
+    </div>
+  </div>
+
+  <div class="row mt-5 second-part">
+    <div class="searcher col-md-12">
+      <!--<hr>-->
+      <div filter>
+        <h1 class="margin-top">Search all owners for:</h1>
+        <select class="selector" placeholder="Item" [(ngModel)]="filter">
+          <option><em>Items...</em></option>
+          <option *ngFor="let item of listItems"><em>{{item.name}}</em></option>
+        </select>
+        <button class="btn-search" (click)="filterList(filter)">Search</button>
+      </div>
+    </div>
+    <!-- --------- -->
+    <div class="col-md-1">
+
+    </div>
+    <div class="col-md-10 scrollable">
+      <table>
+        <tr class="t-headers">
+          <th>Owner's Last Name</th>
+          <th>Owner's First  Name</th>
+          <th>Owner's Fiscal Code</th>
+          <th>Item Name</th>
+          <th>Date of request</th>
+        </tr>
+        
+        <tr *ngFor="let itemlent of filteredList">
+          <td>{{itemlent.lastNameOwner}}</td>
+          <td>{{itemlent.firstNameOwner}}</td>
+          <td>{{itemlent.fiscalCodeForLent}}</td>
+          <td>{{itemlent.itemName}}</td>
+          <td>{{itemlent.date}}</td>
+        </tr>
+      </table>
+    </div>
+    <div class="col-md-1">
+
+    </div>
+    <!-- --------- -->
+    <div class="col-md-12">
+      <h2 class="results">{{results}}</h2><br><br>
+    </div>
+  
+    <div class="col-md-12 download">
+      <h1 class="margin-top" style="margin-bottom: 20px;">Download PDF</h1><br>
+  
+      <a class="btn-download space" (click)="downloadStandard()" href="../../../assets/trackItemsStandard.pdf" download="Items Tracking Standard.pdf">Standard Download</a>
+        <!--<button id="link" class="btn-download space" (click)="downloadStandard()">Standard Download</button>-->
+  
+      <a class="btn-download" href="../../../assets/trackItemsTable.pdf" (click)="downloadTable()" download="Items Tracking Table.pdf">Table Download</a>
+        <!--<button class="btn-download" (click)="downloadTable()">Table Download</button>-->
+    </div>
+  </div>
+</div>
+
+  
